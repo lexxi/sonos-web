@@ -7,10 +7,19 @@ Wants=network-online.target
 Type=simple
 User=sonosweb
 Group=sonosweb
-WorkingDirectory=/home/sonosweb/sonos-web
-Environment="PATH=/home/sonosweb/sonos-web/venv/bin"
 
-ExecStart=/home/sonosweb/sonos-web/venv/bin/gunicorn --bind 127.0.0.1:5000 --workers 1 --threads 4 --timeout 120 --access-logfile - --error-logfile - app:app
+WorkingDirectory=/opt/sonos-web/sonos-web
+Environment="PATH=/opt/sonos-web/sonos-web/venv/bin"
+
+ExecStart=/opt/sonos-web/sonos-web/venv/bin/gunicorn \
+    --chdir /opt/sonos-web/sonos-web \
+    --bind 127.0.0.1:5000 \
+    --workers 1 \
+    --threads 4 \
+    --timeout 120 \
+    --access-logfile - \
+    --error-logfile - \
+    app:app
 
 Restart=on-failure
 RestartSec=3
