@@ -1,0 +1,6 @@
+Flask
+Werkzeug
+SoCo
+mutagen
+requests
+gunicorn
