@@ -13,6 +13,7 @@ import soco
 from mutagen import File as MutagenFile
 
 app = Flask(__name__)
+APP_VERSION = "0.1.0"
 
 # Hinter Apache/Gunicorn die ursprünglichen Host-/Proto-Header verwenden.
 # Wichtig für request.host_url und damit für die Media-URLs, die Sonos erhält.
@@ -844,7 +845,7 @@ def index():
 <div class="app-shell">
     <header class="topbar">
         <div class="brand">
-            <h1>Sonos Web</h1>
+            <h1>Sonos Web <span style="font-size:13px; font-weight:600; color:var(--muted);">v0.1.0</span></h1>
             <div class="brand-sub">Lokale Library, Playlists und Sonos-Steuerung</div>
         </div>
         <div>
