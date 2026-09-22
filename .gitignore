@@ -1,0 +1,40 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# SQLite
+data/*.db
+data/*.db-shm
+data/*.db-wal
+
+# Media cache
+media/cache/*
+!media/cache/.gitkeep
+
+# Secrets / environment
+.env
+.env.*
+*.key
+*.pem
+
+# Logs / Backups
+*.log
+*.bak
+app.py.bak
+
+# Runtime / User files
+.cache/
+.gunicorn/
+.bash_history
+.bashrc
+.bash_logout
+.profile
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
