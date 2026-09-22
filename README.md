@@ -2,6 +2,8 @@
 
 Leichtgewichtige Flask-Weboberfläche zur Steuerung von Sonos-Playern und zur Wiedergabe einer lokalen Musikbibliothek.
 
+**Version:** `0.1.0`
+
 ## Funktionen
 
 - Sonos-Geräte im lokalen Netzwerk erkennen
