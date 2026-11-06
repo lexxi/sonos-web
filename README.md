@@ -24,6 +24,33 @@ Leichtgewichtige Flask-Weboberfläche zur Steuerung von Sonos-Playern und zur Wi
 - vorbereitete YouTube-Suchoberfläche
 - Betrieb hinter Apache Reverse Proxy und Gunicorn
 
+## DAB+ Integration
+
+Die DAB+-Integration wird aktuell als separater Netzwerk-Node aufgebaut.
+
+Aktueller Testaufbau:
+
+```text
+DAB+ Antenne
+   ↓
+Raspberry Pi 2 Model B Rev 1.2
+   ↓
+Nooelec NESDR SMArt v5
+   ↓
+welle-cli
+   ↓
+geplant: HTTP Audio Stream
+   ↓
+Sonos Web
+   ↓
+Sonos
+```
+
+Der aktuelle DAB-Node, Build-Hinweise für `welle-cli`, der ARMHF/`mpg123`-Fix und die Testschritte sind dokumentiert unter:
+
+- [docs/dab-node.md](docs/dab-node.md)
+- [Issue #1 – DAB+ receiver integration via remote RTL-SDR node](https://github.com/lexxi/sonos-web/issues/1)
+
 ## Voraussetzungen
 
 - Linux
@@ -43,6 +70,8 @@ sonos-web/
 ├── config/
 │   ├── apache-sonos-web.conf.example
 │   └── sonos-web.service.example
+├── docs/
+│   └── dab-node.md
 ├── data/
 │   └── .gitkeep
 └── media/
